@@ -34,10 +34,10 @@ if test "${ac_cv_have_tiocgwinsz}" = "yes"; then
   AC_DEFINE(HAVE_TIOCGWINSZ, 1, [Define if you have TIOCGWINSZ])
 fi
 
-#PKG_CHECK_MODULES(CACA, caca >= 0.99.18,
-# [:],
-# [AC_MSG_RESULT(no)
-#  AC_MSG_ERROR([you need libcaca version 0.99.18 or later])])
+#PKG_CHECK_MODULES(CACA, caca >= 0,
+ [:],
+ [AC_MSG_RESULT(no)
+  AC_MSG_ERROR([you need libcaca version 0.99.18 or later])])
 
 AC_MSG_CHECKING([for release date])
 tmp="${stamp%-*}"
